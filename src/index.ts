@@ -18,6 +18,7 @@ server.listen(3000, () => {
 
 io.on('connection', async (socket) => {
     await socket.join('Gustavo\'s Room');
+    console.log('User connected');
     handleEvents(socket, io);
 });
 
